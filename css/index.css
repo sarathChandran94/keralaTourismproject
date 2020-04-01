@@ -1,0 +1,47 @@
+.myJumbo{
+    font-family: fantasy;
+    font-style: italic;
+    text-align: center;
+    background: linear-gradient( rgb(231, 255, 176),#bfd255 100%);
+}
+
+#body-envelope{
+    background:rgb(255, 233, 213);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* .row p-3{
+
+}*/
+
+#kerala{
+    background: linear-gradient(to right, #9ecb2d 0%,#bfd255 100%);
+    text-align: justify;
+    padding: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#kerala-stats{
+    background: linear-gradient(to right, #bfd255 0%,#9ecb2d 100%);
+    text-align: justify;
+    padding: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* districts-page */
+
+.col-md-4{
+    padding: 20px;
+}
+
+/* Alappuzha page */
+
+.myPlaces p{
+    float: left;
+}
+
+.myPlaces img{
+    float: right;
+}
