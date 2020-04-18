@@ -8,7 +8,7 @@
     <title>Kerala Tourism -a project for ICTAK</title>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
 </head>
 
@@ -69,74 +69,116 @@
 
     <!-- main div starts here -->
 
-    <div class="container justify-content-center">
+    <div class="container ">
 
-      <form>
-        <fieldset class="form-group p-5" >
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="fName">First Name</label>
-            <input type="text" class="form-control" id="fName" placeholder="First Name">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="lName">Last Name</label>
-            <input type="text" class="form-control" id="lName" placeholder="Last Name">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="dob">Date of Birth</label>
-            <input type="date" class="form-control" id="dob" placeholder="DD/MM/YYYY">
-          </div>
-        </div>
-          <div class="row">
-            <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
-            <div class="col-sm-10">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
-                <label class="form-check-label" for="gridRadios1">
-                  Male
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                <label class="form-check-label" for="gridRadios2">
-                  Female
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
-                <label class="form-check-label" for="gridRadios3">
-                  Others
-                </label>
-              </div>
-            </div>
-          </div>
-          <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="email-id">Email</label>
-            <input type="email" class="form-control" id="email-id" placeholder="Email">
-          </div>
-          </div>
-          <div class="form-row ">
-          <div class="form-group col-md-6">
-            <label for="phone">Phone</label>
-            <input type="tel" class="form-control" id="phone" placeholder="Phone Number">
-          </div>
-          </div>
-          <button type="submit" class="btn btn-primary">Create Account</button>
-        </fieldset>
+      <form class="row col-md-12 justify-content-center border border-success" action="sign_in.html" onsubmit="return formValidate()">
 
-      </form>
-    </div>
 
+        <fieldset class="card-header col-md-6 border border-danger" >
+
+			<div class="p-2 float-center border border-primary">
+				<h3>CREATE A NEW ACCOUNT</h3>
+			</div>
+
+			<div class="form-row col-md-12 justify-content-center border">
+				<div class="form-group col-md-12 border border-danger">
+				<label for="fName"><h6>First Name:</h6></label>
+				<input type="text" class="form-control" id="fName" placeholder="First Name" required>
+				</div>
+			</div>
+
+			<div class="form-row col-md-12 justify-content-center border">
+				<div class="form-group col-md-12">
+				<label for="lName"><h6>Last Name:</h6></label>
+				<input type="text" class="form-control" id="lName" placeholder="Last Name" required>
+				</div>
+			</div>
+
+			<div class="form-row col-md-12 justify-content-center border">
+				<div class="form-group col-md-12">
+				<label for="dob"><h6>Date of Birth:</h6></label>
+				<input type="date" class="form-control" id="dob" placeholder="DD/MM/YYYY" required>
+				</div>
+			</div>
+
+			<div class="row col-md-12 border">
+				<legend class="col-form-label col-md-2"><h6>Gender:</h6></legend>
+				<div class="col-md-12">
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" required>
+						<label class="form-check-label" for="gridRadios1">Male</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" required>
+						<label class="form-check-label" for="gridRadios2">Female</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" required>
+						<label class="form-check-label" for="gridRadios3">Others</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-row col-md-12 justify-content-center border">
+				<div class="form-group col-md-12">
+					<label for="phone"><h6>Phone Number:</h6></label>
+					<input type="tel" class="form-control" id="phone" placeholder="Phone Number">
+					<p id="phonefb" style="display: none;"></p>
+				</div>
+			</div>
+
+			<div class="form-row col-md-12 justify-content-center border">
+				<div class="form-group col-md-12">
+					<label for="email"><h6>Email:</h6></label>
+					<input type="email" class="form-control" id="email" placeholder="Email">
+					<p id="emailfb" style="display: none;"></p>
+				</div>
+			</div>
+
+			<div class="form-row col-md-12 justify-content-center border">
+				<div class="form-group col-md-12">
+					<label for="password"><h6>Create a new password:</h6></label>
+					<input type="password" class="form-control" id="password" title="Must contain 8-15 characters with atleast one lowercase, uppercase and a number" placeholder="">
+					<p id="pwfb" style="display: none;"></p>
+					<div id="message" style="display: none;">
+						<h6>Password must contain:</h3>
+						<p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+						<p id="capital" class="invalid">An <b>uppercase</b> letter</p>
+						<p id="number" class="invalid">A <b>number</b></p>
+						<p id="length" class="invalid"><b>8-15</b> characters</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-row col-md-12 justify-content-center border">
+				<div class="form-group col-md-12">
+					<label for="password2"><h6>Confirm password:</h6></label>
+					<input type="password" class="form-control" id="password2" title="Please re-enter the password" placeholder="">
+					<p id="pw2fb" style="display: none;"></p>
+				</div>
+			</div>
+
+			<br><button class="btn btn-primary float-right">Create Account</button>
+
+		</fieldset>
+
+
+	  </form>
+
+	</div>
+
+	<!-- Footer starts -->
     <footer class="card-footer bg-dark text-light text-center rounded">
         &copy;Sarath C - FSD
-    </footer>
+	</footer>
+	<!-- Footer ends -->
+
   </div>
 
+<!-- javascript file-->
+<script src="script.js"></script>
+
+<!-- Bootstrap plugins -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
