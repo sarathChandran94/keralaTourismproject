@@ -71,37 +71,37 @@
 
     <div class="container ">
 
-      <form class="row col-md-12 justify-content-center border border-success" action="sign_in.html" onsubmit="return formValidate()">
+      <form class="row col-md-12 py-5 justify-content-center" id="myForm" action="sign_in.html" onsubmit="return formValidate()">
 
 
-        <fieldset class="card-header col-md-6 border border-danger" >
+        <fieldset class="card-header col-md-6 border border-danger text-white" id="form" >
 
-			<div class="p-2 float-center border border-primary">
+			<div class="p-2 text-center">
 				<h3>CREATE A NEW ACCOUNT</h3>
 			</div>
 
-			<div class="form-row col-md-12 justify-content-center border">
-				<div class="form-group col-md-12 border border-danger">
+			<div class="form-row col-md-12 justify-content-center">
+				<div class="form-group col-md-12">
 				<label for="fName"><h6>First Name:</h6></label>
 				<input type="text" class="form-control" id="fName" placeholder="First Name" required>
 				</div>
 			</div>
 
-			<div class="form-row col-md-12 justify-content-center border">
+			<div class="form-row col-md-12 justify-content-center">
 				<div class="form-group col-md-12">
 				<label for="lName"><h6>Last Name:</h6></label>
 				<input type="text" class="form-control" id="lName" placeholder="Last Name" required>
 				</div>
 			</div>
 
-			<div class="form-row col-md-12 justify-content-center border">
+			<div class="form-row col-md-12 justify-content-center">
 				<div class="form-group col-md-12">
 				<label for="dob"><h6>Date of Birth:</h6></label>
 				<input type="date" class="form-control" id="dob" placeholder="DD/MM/YYYY" required>
 				</div>
 			</div>
 
-			<div class="row col-md-12 border">
+			<div class="row col-md-12">
 				<legend class="col-form-label col-md-2"><h6>Gender:</h6></legend>
 				<div class="col-md-12">
 					<div class="form-check">
@@ -119,7 +119,7 @@
 				</div>
 			</div>
 
-			<div class="form-row col-md-12 justify-content-center border">
+			<div class="form-row col-md-12 justify-content-center">
 				<div class="form-group col-md-12">
 					<label for="phone"><h6>Phone Number:</h6></label>
 					<input type="tel" class="form-control" id="phone" placeholder="Phone Number">
@@ -127,7 +127,7 @@
 				</div>
 			</div>
 
-			<div class="form-row col-md-12 justify-content-center border">
+			<div class="form-row col-md-12 justify-content-center">
 				<div class="form-group col-md-12">
 					<label for="email"><h6>Email:</h6></label>
 					<input type="email" class="form-control" id="email" placeholder="Email">
@@ -135,7 +135,7 @@
 				</div>
 			</div>
 
-			<div class="form-row col-md-12 justify-content-center border">
+			<div class="form-row col-md-12 justify-content-center">
 				<div class="form-group col-md-12">
 					<label for="password"><h6>Create a new password:</h6></label>
 					<input type="password" class="form-control" id="password" title="Must contain 8-15 characters with atleast one lowercase, uppercase and a number" placeholder="">
@@ -150,7 +150,7 @@
 				</div>
 			</div>
 
-			<div class="form-row col-md-12 justify-content-center border">
+			<div class="form-row col-md-12 justify-content-center">
 				<div class="form-group col-md-12">
 					<label for="password2"><h6>Confirm password:</h6></label>
 					<input type="password" class="form-control" id="password2" title="Please re-enter the password" placeholder="">

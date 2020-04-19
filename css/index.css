@@ -30,6 +30,10 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+#form{
+    background: #00c570c4;
+}
+
 /* districts-page */
 
 .col-md-4{
