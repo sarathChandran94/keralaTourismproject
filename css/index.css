@@ -6,38 +6,58 @@
 }
 
 #body-envelope{
-    background:rgb(255, 233, 213);
+    background: linear-gradient(to bottom, #00a790 0%, #00c570 50%, #00a790 100%);
+    background: linear-gradient(to left, #00a790 0%, #00c570 25%, #00c570 75%, #00a790 100%);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-/* .row p-3{
-
-}*/
+#myNav{
+    background-color: #008795;
+}
 
 #kerala{
     background: linear-gradient(to right, #9ecb2d 0%,#bfd255 100%);
     text-align: justify;
-    padding: 40px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 20px 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #kerala-stats{
     background: linear-gradient(to right, #bfd255 0%,#9ecb2d 100%);
     text-align: justify;
-    padding: 40px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 20px 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #form{
-    background: #00c570c4;
+    background: darkslategray;
+}
+
+#password-strength-meter {
+    width: 250px;
+    height: 7px;
 }
 
 /* districts-page */
 
-.col-md-4{
+.myDistrict{
+    margin: 0px 0px;
+    /* background: linear-gradient(to bottom, #00a790 0%, #0fdf2e 50%, #00a790 100%);
+    background: linear-gradient(to left, #00a790 0%, #0fdf2e 50%, #00a790 100%); */
+}
+
+.myDist{
     padding: 20px;
+    margin: 20px 0px;
+
+}
+
+.myDist img{
+    width: 100%;
+    height: 200px;
+    display: block;
 }
 
 /* Alappuzha page */

@@ -16,7 +16,7 @@
     <div id="body-envelope">
 
         <!-- navbar starts here... -->
-        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark rounded">
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark rounded" id="myNav">
             <a class="navbar-brand" href="index.html"><h2>WHERE TO NEXT..? <sub> - KERALA </sub></h2></a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,28 +26,28 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link btn-lg" href="districts.html">Districts</a>
+                    <a class="nav-link btn-lg" href="districts.html" >Districts</a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link btn-lg" data-toggle="dropdown" data-target="dropdown-target" href="#">Sign-In</a>
                     <div class="dropdown-menu">
-                        <form class="px-4 py-3">
+                        <form class="px-4 py-3" action="sign_in.html">
                             <div class="form-group">
-                                <label for="exampleDropdownFormEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                                <!-- <label for="exampleDropdownFormEmail1"></label> -->
+                                <input type="email" class="form-control" id="exampleDropdownFormEmail email" placeholder="Email Address" required>
                             </div>
                             <div class="form-group">
-                                <label for="exampleDropdownFormPassword1">Password</label>
-                                <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                                <!-- <label for="exampleDropdownFormPassword1"></label> -->
+                                <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password" required>
                             </div>
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <div class="form-check">
                                 <input type="checkbox" class="form-check-input" id="dropdownCheck">
                                 <label class="form-check-label" for="dropdownCheck">
                                     Remember me
                                 </label>
                                 </div>
-                            </div>
+                            </div> -->
                             <button type="submit" class="btn btn-primary">Sign in</button>
                         </form>
                         <div class="dropdown-divider"></div>
@@ -68,89 +68,89 @@
 
         <!-- Main div starts here -->
 
-        <div class="container-fluid" id="districts-envelope">
+        <div class="container" id="districts-envelope">
 
-            <div class="row p-2 justify-content-around" id="districts">
-                <div class="col-md-4 " style="height: 150px;">
+            <div class="row justify-content-around myDistrict" id="districts">
+                <div class="col-md-4 myDist">
                     <a href="/districts_html/thiruvananthapuram.html">
-                        <img src="Images/trivandrum.jpg" width="100%" height="100%" class=" rounded-lg">THIRUVANANTHAPURAM
+                        <img src="Images/trivandrum.jpg" alt="Trivandrum" class=" rounded-lg">THIRUVANANTHAPURAM
                     </a>
                 </div>
-                <div class="col-md-4 " style="height: 150px;">
+                <div class="col-md-4 myDist">
                     <a href="/districts_html/kollam.html">
-                        <img  src="Images/kollam.jpg" width="100%" height="100%" class=" rounded-lg">KOLLAM
+                        <img  src="Images/kollam.jpg" alt="Kollam" class=" rounded-lg">KOLLAM
                     </a>
                 </div>
             </div>
-            <div class="row p-2 justify-content-around" id="districts">
-                <div class="col-md-4" style="height: 150px;">
+            <div class="row justify-content-around myDistrict" id="districts">
+                <div class="col-md-4 myDist">
                     <a href="/districts_html/kottayam.html">
-                        <img src="Images/kottayam.jpg" width="100%" height="100%" class=" rounded-lg">KOTTAYAM
+                        <img src="Images/kottayam.jpg" alt="Kottayam" class=" rounded-lg">KOTTAYAM
                     </a>
                 </div>
-                <div class="col-md-4" style="height: 150px;">
+                <div class="col-md-4 myDist">
                     <a href="/districts_html/pathanamthitta.html">
-                        <img src="Images/pathanamthitta.jpg" width="100%" height="100%" class=" rounded-lg">PATHANAMTHITTA
+                        <img src="Images/pathanamthitta.jpg" alt="Pathanamthitta" class=" rounded-lg">PATHANAMTHITTA
                     </a>
                 </div>
             </div>
-            <div class="row p-2 justify-content-around" id="districts">
-                <div class="col-md-4" style="height: 150px;">
+            <div class="row justify-content-around myDistrict" id="districts">
+                <div class="col-md-4 myDist">
                     <a href="/districts_html/alappuzha.html">
-                        <img src="Images/alappuzha.jpg" width="100%" height="100%" class=" rounded-lg">ALAPUZHA
+                        <img src="Images/alappuzha.jpg" alt="Alappuzha" class=" rounded-lg">ALAPUZHA
                     </a>
                 </div>
-                <div class="col-md-4" style="height: 150px;">
+                <div class="col-md-4 myDist">
                     <a href="/districts_html/ernakulam.html">
-                        <img src="Images/ernakulam.jpg" width="100%" height="100%" class=" rounded-lg">ERNAKULAM
+                        <img src="Images/ernakulam.jpg" alt="Ernakulam" class=" rounded-lg">ERNAKULAM
                     </a>
                 </div>
             </div>
-            <div class="row p-2 justify-content-around" id="districts">
-                <div class="col-md-4" style="height: 150px;">
+            <div class="row justify-content-around myDistrict" id="districts">
+                <div class="col-md-4 myDist">
                     <a href="/districts_html/idukki.html">
-                        <img src="Images/idukki.jpg" width="100%" height="100%" class=" rounded-lg">IDUKKI
+                        <img src="Images/idukki.jpg" alt="Idukki" class=" rounded-lg">IDUKKI
                     </a>
                 </div>
-                <div class="col-md-4" style="height: 150px;">
+                <div class="col-md-4 myDist">
                     <a href="/districts_html/thrissur.html">
-                        <img src="Images/thrissur.jpg" width="100%" height="100%" class=" rounded-lg">THRISSUR
+                        <img src="Images/thrissur.jpg" alt="Thrissur" class=" rounded-lg">THRISSUR
                     </a>
                 </div>
             </div>
-            <div class="row p-2 justify-content-around" id="districts">
-                <div class="col-md-4" style="height: 150px;">
+            <div class="row justify-content-around myDistrict" id="districts">
+                <div class="col-md-4 myDist">
                     <a href="/districts_html/palakkad.html">
-                        <img src="Images/palakkad.jpg" width="100%" height="100%" class=" rounded-lg">PALAKKAD
+                        <img src="Images/palakkad.jpg" alt="Palakkad" class=" rounded-lg">PALAKKAD
                     </a>
                 </div>
-                <div class="col-md-4" style="height: 150px;">
+                <div class="col-md-4 myDist">
                     <a href="/districts_html/malappuram.html">
-                        <img src="Images/malappuram.jpg" width="100%" height="100%" class=" rounded-lg caption">MALAPPURAM
+                        <img src="Images/malappuram.jpg" alt="Malappuram" class=" rounded-lg caption">MALAPPURAM
                     </a>
                 </div>
             </div>
-            <div class="row p-2 justify-content-around" id="districts">
-                <div class="col-md-4" style="height: 150px;">
+            <div class="row justify-content-around myDistrict" id="districts">
+                <div class="col-md-4 myDist">
                     <a href="/districts_html/kozhikkode.html">
-                        <img src="Images/kozhikkode.jpg" width="100%" height="100%" class=" rounded-lg">KOZHIKKODE
+                        <img src="Images/kozhikkode.jpg" alt="Kozhikkod" class=" rounded-lg">KOZHIKKODE
                     </a>
                 </div>
-                <div class="col-md-4" style="height: 150px;">
+                <div class="col-md-4 myDist">
                     <a href="/districts_html/wayanad.html">
-                        <img src="Images/wayanad.jpg" width="100%" height="100%" class=" rounded-lg">WAYANAD
+                        <img src="Images/wayanad.jpg" alt="Wayanad" class=" rounded-lg">WAYANAD
                     </a>
                 </div>
             </div>
-            <div class="row p-2 justify-content-around" id="districts">
-                <div class="col-md-4" style="height: 150px;">
+            <div class="row justify-content-around myDistrict" id="districts">
+                <div class="col-md-4 myDist">
                     <a href="/districts_html/kannur.html">
-                        <img src="Images/kannur.jpg"3 width="100%" height="100%" class=" rounded-lg">KANNUR
+                        <img src="Images/kannur.jpg" alt="Kannur" class=" rounded-lg">KANNUR
                     </a>
                 </div>
-                <div class="col-md-4" style="height: 150px;">
+                <div class="col-md-4 myDist">
                     <a href="/districts_html/kasargod.html">
-                        <img src="Images/kasargod.jpg" width="100%" height="100%" class=" rounded-lg">KASARGODE
+                        <img src="Images/kasargod.jpg" alt="Kasargod" class=" rounded-lg">KASARGODE
                     </a>
                 </div>
             </div>
