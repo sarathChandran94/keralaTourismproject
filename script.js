@@ -25,7 +25,7 @@ function formValidate(){
         emailip.onkeypress = function myMail(){emailfb.style.display = "none";}
         return false;
     }
-    else if (regexpPw.test(pw.value) == false){
+    else if (regexpPw.test(pw.value) == ""){
         pwfb.style.display = "block";
         pwfb.innerHTML = "Password cannot be empty!";
         pwfb.style.color = "red";
@@ -45,3 +45,30 @@ function formValidate(){
 pw.onblur = function myBlur(){document.getElementById("message").style.display = "none";}
 pw.onfocus = function myFocus(){document.getElementById("message").style.display = "block";}
 
+let strength = document.getElementById("password-strength-meter");
+let strengthText = document.getElementById("password-strength-text");
+pw.addEventListener("input",myFunction);
+function  myFunction(){
+    let regexpPw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{8,15}$/;
+
+    if (regexpPw.test(pw.value) == false && pw.value.length <= 7){
+        strength.value = "5";
+        strengthText.innerText = "Poor";
+        strengthText.style.color = "red";
+    }
+    if (regexpPw.test(pw.value) == true && 8 <= pw.value.length){
+        strength.value = "10";
+        strengthText.innerHTML = "Medium";
+        strengthText.style.color = "orange";
+    }
+    if (regexpPw.test(pw.value) == true && pw.value.length >= 12) {
+        strength.value = "15";
+        strengthText.innerHTML = "Strong";
+        strengthText.style.color = "green";
+    }
+    if (regexpPw.test(pw.value) == "" && pw.value.length == ""){
+        strength.value = "0";
+        strengthText.innerHTML = "";
+    }
+
+}
