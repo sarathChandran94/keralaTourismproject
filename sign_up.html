@@ -17,7 +17,7 @@
 
     <!-- navbar starts here -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded">
+    <nav class="navbar navbar-expand-lg navbar-dark rounded" id="myNav">
         <a class="navbar-brand" href="index.html"><h2>WHERE TO NEXT..? <sub> - KERALA </sub></h2></a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,29 +32,29 @@
             <li class="nav-item dropdown">
               <a class="nav-link btn-lg" data-toggle="dropdown" data-target="dropdown-target" href="#">Sign-In</a>
               <div class="dropdown-menu">
-                  <form class="px-4 py-3">
-                      <div class="form-group">
-                          <label for="exampleDropdownFormEmail1">Email address</label>
-                          <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
-                      </div>
-                      <div class="form-group">
-                          <label for="exampleDropdownFormPassword1">Password</label>
-                          <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
-                      </div>
-                      <div class="form-group">
-                          <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                          <label class="form-check-label" for="dropdownCheck">
-                              Remember me
-                          </label>
-                          </div>
-                      </div>
-                      <button type="submit" class="btn btn-primary">Sign in</button>
-                  </form>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="sign_up.html">New around here? Sign up</a>
-                  <!-- <a class="dropdown-item" href="#">Forgot password?</a> -->
-              </div>
+				<form class="px-4 py-3" action="sign_in.html">
+					<div class="form-group">
+						<!-- <label for="exampleDropdownFormEmail1"></label> -->
+						<input type="email" class="form-control" id="exampleDropdownFormEmail email" placeholder="Email Address" required>
+					</div>
+					<div class="form-group">
+						<!-- <label for="exampleDropdownFormPassword1"></label> -->
+						<input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password" required>
+					</div>
+					<!-- <div class="form-group">
+						<div class="form-check">
+						<input type="checkbox" class="form-check-input" id="dropdownCheck">
+						<label class="form-check-label" for="dropdownCheck">
+							Remember me
+						</label>
+						</div>
+					</div> -->
+					<button type="submit" class="btn btn-primary">Sign in</button>
+				</form>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="sign_up.html">New around here? Sign up</a>
+				<!-- <a class="dropdown-item" href="#">Forgot password?</a> -->
+			</div>
             </li>
             <li class="nav-item">
               <a class="nav-link btn-lg" href="sign_up.html">Sign-Up</a>
@@ -74,7 +74,7 @@
       <form class="row col-md-12 py-5 justify-content-center" id="myForm" action="sign_in.html" onsubmit="return formValidate()">
 
 
-        <fieldset class="card-header col-md-6 border border-danger text-white" id="form" >
+        <fieldset class="card-header col-md-6 text-white" id="form" >
 
 			<div class="p-2 text-center">
 				<h3>CREATE A NEW ACCOUNT</h3>
@@ -141,6 +141,8 @@
 					<input type="password" class="form-control" id="password" title="Must contain 8-15 characters with atleast one lowercase, uppercase and a number" placeholder="">
 					<p id="pwfb" style="display: none;"></p>
 					<div id="message" style="display: none;">
+						<meter oninput="myFunction()" low="6" high="11" optimum="12" max="15" value="0" id="password-strength-meter"></meter>
+           				<span id="password-strength-text">  </span>
 						<h6>Password must contain:</h3>
 						<p id="letter" class="invalid">A <b>lowercase</b> letter</p>
 						<p id="capital" class="invalid">An <b>uppercase</b> letter</p>
