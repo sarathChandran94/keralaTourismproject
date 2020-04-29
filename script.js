@@ -7,6 +7,16 @@ let pwfb = document.getElementById("pwfb");
 let pw2 = document.getElementById("password2");
 let pw2fb = document.getElementById("pw2fb");
 
+// shadow effects
+let x = document.getElementById("form");
+function shadowEffectOn() {
+    x.classList.add("shadow-lg");
+}
+function shadowEffectOff() {
+    x.classList.remove("shadow-lg");
+}
+
+// Form Validation
 function formValidate(){
     let regexpPhone = /^([0-9]){10}$/;
     let regexpEmail = /^([\w\.\-]+)@([\w\-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
@@ -42,9 +52,17 @@ function formValidate(){
 
     return true;
 }
-pw.onblur = function myBlur(){document.getElementById("message").style.display = "none";}
-pw.onfocus = function myFocus(){document.getElementById("message").style.display = "block";}
 
+// Password input hidden details
+pw.onblur = function myBlur() {
+    document.getElementById("message").style.display = "none";
+}
+pw.onfocus = function myFocus() {
+    document.getElementById("message").style.display = "block";
+}
+
+
+// Password strength meter
 let strength = document.getElementById("password-strength-meter");
 let strengthText = document.getElementById("password-strength-text");
 pw.addEventListener("input",myFunction);
@@ -72,3 +90,4 @@ function  myFunction(){
     }
 
 }
+
