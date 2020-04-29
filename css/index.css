@@ -1,5 +1,5 @@
 .myJumbo{
-    font-family: fantasy;
+    font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
     text-align: center;
     background: linear-gradient( rgb(231, 255, 176),#bfd255 100%);
@@ -21,14 +21,14 @@
     background: linear-gradient(to right, #9ecb2d 0%,#bfd255 100%);
     text-align: justify;
     padding: 20px 40px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #kerala-stats{
     background: linear-gradient(to right, #bfd255 0%,#9ecb2d 100%);
     text-align: justify;
     padding: 20px 40px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #form{
@@ -42,30 +42,51 @@
 
 /* districts-page */
 
-.myDistrict{
-    margin: 0px 0px;
-    /* background: linear-gradient(to bottom, #00a790 0%, #0fdf2e 50%, #00a790 100%);
-    background: linear-gradient(to left, #00a790 0%, #0fdf2e 50%, #00a790 100%); */
+.container .myDist-row{
+    position: relative;
 }
 
-.myDist{
-    padding: 20px;
+.container .myDist{
+    position: relative;
+    padding: 0px;
     margin: 20px 0px;
-
+    overflow: hidden;
 }
 
-.myDist img{
+.container .myDist .myDist-img{
+    position: relative;
+}
+
+.container .myDist .myDist-img img{
+    object-fit: cover;
     width: 100%;
     height: 200px;
-    display: block;
+    transition: transform .5s;
 }
 
-/* Alappuzha page */
-
-.myPlaces p{
-    float: left;
+.container .myDist:hover .myDist-img img{
+    transform: scale(1.2);
 }
 
-.myPlaces img{
-    float: right;
+.container .myDist .details{
+    position: absolute;
+    top: 150px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    transform: translateY(50px);
+    transition: transform .2s;
+}
+
+.container .myDist:hover .details{
+    transform: translateY(0px);
+}
+
+.container .myDist .details .content{
+
+    /* transform: scaleY(-50%); */
+    text-align: center;
+    padding-top: 12px;
+    color: seashell;
 }
