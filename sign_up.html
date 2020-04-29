@@ -6,7 +6,7 @@
     <meta name="author" content="Sarath C - FSD, Koratty Batch">
     <meta name="keywords" content="Kerala Tourism,Tourism,Kerala">
     <title>Kerala Tourism -a project for ICTAK</title>
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
@@ -57,7 +57,7 @@
 			</div>
             </li>
             <li class="nav-item">
-              <a class="nav-link btn-lg" href="sign_up.html">Sign-Up</a>
+              <a class="nav-link btn-lg active" href="sign_up.html">Sign-Up</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
@@ -71,10 +71,10 @@
 
     <div class="container ">
 
-      <form class="row col-md-12 py-5 justify-content-center" id="myForm" action="sign_in.html" onsubmit="return formValidate()">
+      <form class="row col-md-12 py-5 justify-content-center" id="myForm" action="sign_in.html" onsubmit="return formValidate()" >
 
 
-        <fieldset class="card-header col-md-6 text-white" id="form" >
+        <fieldset class=" card-header col-md-6 text-white rounded-lg" id="form" onmouseover="shadowEffectOn()" onmouseout="shadowEffectOff()">
 
 			<div class="p-2 text-center">
 				<h3>CREATE A NEW ACCOUNT</h3>
@@ -82,28 +82,28 @@
 
 			<div class="form-row col-md-12 justify-content-center">
 				<div class="form-group col-md-12">
-				<label for="fName"><h6>First Name:</h6></label>
-				<input type="text" class="form-control" id="fName" placeholder="First Name" required>
+					<label for="fName"><h6>First Name:</h6></label>
+					<input type="text" class="form-control" id="fName" placeholder="First Name" required>
 				</div>
 			</div>
 
 			<div class="form-row col-md-12 justify-content-center">
 				<div class="form-group col-md-12">
-				<label for="lName"><h6>Last Name:</h6></label>
-				<input type="text" class="form-control" id="lName" placeholder="Last Name" required>
+					<label for="lName"><h6>Last Name:</h6></label>
+					<input type="text" class="form-control" id="lName" placeholder="Last Name" required>
 				</div>
 			</div>
 
 			<div class="form-row col-md-12 justify-content-center">
 				<div class="form-group col-md-12">
-				<label for="dob"><h6>Date of Birth:</h6></label>
-				<input type="date" class="form-control" id="dob" placeholder="DD/MM/YYYY" required>
+					<label for="dob"><h6>Date of Birth:</h6></label>
+					<input type="date" class="form-control" id="dob" placeholder="DD-MM-YYYY" required>
 				</div>
 			</div>
 
-			<div class="row col-md-12">
+			<div class="form-row col-md-12">
 				<legend class="col-form-label col-md-2"><h6>Gender:</h6></legend>
-				<div class="col-md-12">
+				<div class="col-md-12 form-check-inline">
 					<div class="form-check">
 						<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" required>
 						<label class="form-check-label" for="gridRadios1">Male</label>
@@ -118,6 +118,18 @@
 					</div>
 				</div>
 			</div>
+
+			<!-- <div class="form-row col-md-12 justify-content-center">
+				<div class="form-group col-md-12">
+					<label for="inputGender"><h6>Gender:</h6></label>
+					<select id="inputGender" class="form-control">				// not-able to validate
+						<option selected required>Choose...</option>
+						<option value="1" required>Male</option>
+						<option value="2" required>Female</option>
+						<option value="3" required>Others</option>
+					</select>
+				</div>
+			  </div> -->
 
 			<div class="form-row col-md-12 justify-content-center">
 				<div class="form-group col-md-12">
