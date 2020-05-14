@@ -31,7 +31,7 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link btn-lg" data-toggle="dropdown" data-target="dropdown-target" href="#">Sign-In</a>
-              <div class="dropdown-menu">
+              <div class="dropdown-menu" id="signInDropdown">
 				<form class="px-4 py-3" action="sign_in.html">
 					<div class="form-group">
 						<!-- <label for="exampleDropdownFormEmail1"></label> -->
@@ -77,32 +77,35 @@
         <fieldset class=" card-header col-md-6 text-white rounded-lg" id="form" onmouseover="shadowEffectOn()" onmouseout="shadowEffectOff()">
 
 			<div class="p-2 text-center">
-				<h3>CREATE A NEW ACCOUNT</h3>
+                <h3>CREATE A NEW ACCOUNT</h3>
+                <p style="color: red;text-align: right;padding-right: 35px;">*reqiured</p>
 			</div>
 
 			<div class="form-row col-md-12 justify-content-center">
 				<div class="form-group col-md-12">
-					<label for="fName"><h6>First Name:</h6></label>
-					<input type="text" class="form-control" id="fName" placeholder="First Name" required>
+					<label for="fName"><h6>First Name<span style="color: red;">*</span>:</h6></label>
+                    <input type="text" class="form-control" id="fName" >
+                    <p id="fNamefb" style="display: none;"></p>
 				</div>
 			</div>
 
 			<div class="form-row col-md-12 justify-content-center">
 				<div class="form-group col-md-12">
 					<label for="lName"><h6>Last Name:</h6></label>
-					<input type="text" class="form-control" id="lName" placeholder="Last Name" required>
+					<input type="text" class="form-control" id="lName" >
 				</div>
 			</div>
 
 			<div class="form-row col-md-12 justify-content-center">
 				<div class="form-group col-md-12">
-					<label for="dob"><h6>Date of Birth:</h6></label>
-					<input type="date" class="form-control" id="dob" placeholder="DD-MM-YYYY" required>
+					<label for="dob"><h6>Date of Birth<span style="color: red;">*</span>:</h6></label>
+                    <input type="date" class="form-control" id="dob" placeholder="dd-mm-yyyy" >
+                    <p id="dobfb" style="display: none;"></p>
 				</div>
 			</div>
 
 			<div class="form-row col-md-12">
-				<legend class="col-form-label col-md-2"><h6>Gender:</h6></legend>
+				<legend class="col-form-label col-md-2"><h6>Gender<span style="color: red;">*</span>:</h6></legend>
 				<div class="col-md-12 form-check-inline">
 					<div class="form-check">
 						<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" required>
@@ -133,24 +136,24 @@
 
 			<div class="form-row col-md-12 justify-content-center">
 				<div class="form-group col-md-12">
-					<label for="phone"><h6>Phone Number:</h6></label>
-					<input type="tel" class="form-control" id="phone" placeholder="Phone Number">
+                    <label for="phone"><h6>Phone Number<span style="color: red;">*</span>:</h6></label>
+					<input type="tel" class="form-control" id="phone" title="Accepted formats: 1234567890, 123-456-7890, 123.456.7890, 123 456 7890">
 					<p id="phonefb" style="display: none;"></p>
 				</div>
 			</div>
 
 			<div class="form-row col-md-12 justify-content-center">
 				<div class="form-group col-md-12">
-					<label for="email"><h6>Email:</h6></label>
-					<input type="email" class="form-control" id="email" placeholder="Email">
+					<label for="email"><h6>Email<span style="color: red;">*</span>:</h6></label>
+					<input type="email" class="form-control" id="email" title="Please enter a valid email address">
 					<p id="emailfb" style="display: none;"></p>
 				</div>
 			</div>
 
 			<div class="form-row col-md-12 justify-content-center">
 				<div class="form-group col-md-12">
-					<label for="password"><h6>Create a new password:</h6></label>
-					<input type="password" class="form-control" id="password" title="Must contain 8-15 characters with atleast one lowercase, uppercase and a number" placeholder="">
+					<label for="password"><h6>Create a new password<span style="color: red;">*</span>:</h6></label>
+					<input type="password" class="form-control" id="password" title="Must contain 8-15 characters with atleast one lowercase, uppercase and a number">
 					<p id="pwfb" style="display: none;"></p>
 					<div id="message" style="display: none;">
 						<meter oninput="myFunction()" low="6" high="11" optimum="12" max="15" value="0" id="password-strength-meter"></meter>
@@ -166,8 +169,8 @@
 
 			<div class="form-row col-md-12 justify-content-center">
 				<div class="form-group col-md-12">
-					<label for="password2"><h6>Confirm password:</h6></label>
-					<input type="password" class="form-control" id="password2" title="Please re-enter the password" placeholder="">
+					<label for="password2"><h6>Confirm password<span style="color: red;">*</span>:</h6></label>
+					<input type="password" class="form-control" id="password2" title="Please re-enter the password">
 					<p id="pw2fb" style="display: none;"></p>
 				</div>
 			</div>

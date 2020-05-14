@@ -30,9 +30,19 @@
     padding: 20px 40px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+#signInDropdown {
+    background-color: rgba(119, 136, 153, 0.900);
+}
+#signInDropdown a {
+    color: darkblue;
+}
+#signInDropdown input {
+    border: darkslategrey solid 1px;
+}
 
+/*sign-up page*/
 #form{
-    background: darkslategray;
+    background-color: darkslategray;
 }
 
 #password-strength-meter {
@@ -65,7 +75,7 @@
 }
 
 .container .myDist:hover .myDist-img img{
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .container .myDist .details{

@@ -37,19 +37,20 @@
                         <a class="nav-link btn-lg" href="districts.html">Districts</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link btn-lg" data-toggle="dropdown" data-target="dropdown-target" href="#">Sign-In</a>
-                        <div class="dropdown-menu">
-                            <form class="px-4 py-3" action="sign_in.html">
+                        <a class="nav-link btn-lg" data-toggle="dropdown" data-target="dropdown-target" href="">Sign-In</a>
+                        <div class="dropdown-menu" id="signInDropdown">
+                            <form class="px-4 py-3" action="sign_in.html" onsubmit="return signinValidate()">
                                 <div class="form-group">
                                     <!-- <label for="exampleDropdownFormEmail1"></label> -->
-                                    <input type="email" class="form-control" id="exampleDropdownFormEmail email" placeholder="Email Address" required>
+                                    <input type="email" class="form-control" id="emailIpSignin" placeholder="Email Address" title="Enter a valid email address">
+                                    <p id="emailFbSignin" style="display: none;"></p>
                                 </div>
                                 <div class="form-group">
                                     <!-- <label for="exampleDropdownFormPassword1"></label> -->
-                                    <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password" required>
+                                    <input type="password" class="form-control" id="pwSignin" placeholder="Password" title="Enter password">
+                                    <p id="pwFbSignin" style="display: none;"></p>
                                 </div>
-
-                                <button type="submit" class="btn btn-primary">Sign in</button>
+                                <button class="btn btn-primary">Sign in</button>
                             </form>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="sign_up.html">New around here? Sign up</a>
