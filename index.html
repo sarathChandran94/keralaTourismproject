@@ -36,27 +36,27 @@
                     <li class="nav-item">
                         <a class="nav-link btn-lg" href="districts.html">Districts</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item">
+                        <a class="nav-link btn-lg" href="sign_in.html">Sign In</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link btn-lg" data-toggle="dropdown" data-target="dropdown-target" href="">Sign-In</a>
                         <div class="dropdown-menu" id="signInDropdown">
-                            <form class="px-4 py-3" action="sign_in.html" onsubmit="return signinValidate()">
+                            <form class="px-4 py-3" action="sign_in.html" id="mySigninForm" onsubmit="return signinValidate()">
                                 <div class="form-group">
-                                    <!-- <label for="exampleDropdownFormEmail1"></label> -->
-                                    <input type="email" class="form-control" id="emailIpSignin" placeholder="Email Address" title="Enter a valid email address">
-                                    <p id="emailFbSignin" style="display: none;"></p>
+                                    <input type="text" class="form-control" id="emailIpSignin" placeholder="Email Address" title="Enter a valid email address">
+                                    <p id="emailFbSignin" ></p>
                                 </div>
                                 <div class="form-group">
-                                    <!-- <label for="exampleDropdownFormPassword1"></label> -->
                                     <input type="password" class="form-control" id="pwSignin" placeholder="Password" title="Enter password">
                                     <p id="pwFbSignin" style="display: none;"></p>
                                 </div>
-                                <button class="btn btn-primary">Sign in</button>
+                                <button type="submit" form="mySigninForm"  class="btn btn-primary">Sign in</button>
                             </form>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="sign_up.html">New around here? Sign up</a>
-                            <!-- <a class="dropdown-item" href="#">Forgot password?</a> -->
                         </div>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link btn-lg" href="sign_up.html">Sign-Up</a>
                     </li>
@@ -165,8 +165,8 @@
                         <!-- Bootstrap Plugins -->
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 </body>
 </html>
