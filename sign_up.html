@@ -18,7 +18,7 @@
     <!-- navbar starts here -->
 
     <nav class="navbar navbar-expand-lg navbar-dark rounded" id="myNav">
-        <a class="navbar-brand" href="index.html"><h2>WHERE TO NEXT..? <sub> - KERALA </sub></h2></a>
+        <h2 style="color: white;">WHERE TO NEXT..? <sub> - KERALA </sub></h2>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -27,35 +27,34 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
+              <a class="nav-link btn-lg" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link btn-lg" href="districts.html">Districts</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item">
+              <a class="nav-link btn-lg" href="sign_in.html">Sign In</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
               <a class="nav-link btn-lg" data-toggle="dropdown" data-target="dropdown-target" href="#">Sign-In</a>
               <div class="dropdown-menu" id="signInDropdown">
 				<form class="px-4 py-3" action="sign_in.html">
 					<div class="form-group">
-						<!-- <label for="exampleDropdownFormEmail1"></label> -->
+
 						<input type="email" class="form-control" id="exampleDropdownFormEmail email" placeholder="Email Address" required>
 					</div>
 					<div class="form-group">
-						<!-- <label for="exampleDropdownFormPassword1"></label> -->
+
 						<input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password" required>
 					</div>
-					<!-- <div class="form-group">
-						<div class="form-check">
-						<input type="checkbox" class="form-check-input" id="dropdownCheck">
-						<label class="form-check-label" for="dropdownCheck">
-							Remember me
-						</label>
-						</div>
-					</div> -->
+
 					<button type="submit" class="btn btn-primary">Sign in</button>
 				</form>
 				<div class="dropdown-divider"></div>
 				<a class="dropdown-item" href="sign_up.html">New around here? Sign up</a>
-				<!-- <a class="dropdown-item" href="#">Forgot password?</a> -->
+
 			</div>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link btn-lg active" href="sign_up.html">Sign-Up</a>
             </li>
@@ -78,7 +77,7 @@
 
 			<div class="p-2 text-center">
                 <h3>CREATE A NEW ACCOUNT</h3>
-                <p style="color: red;text-align: right;padding-right: 35px;">*reqiured</p>
+                <p style="color: red;text-align: right;">*reqiured</p>
 			</div>
 
 			<div class="form-row col-md-12 justify-content-center">
@@ -98,41 +97,29 @@
 
 			<div class="form-row col-md-12 justify-content-center">
 				<div class="form-group col-md-12">
-					<label for="dob"><h6>Date of Birth<span style="color: red;">*</span>:</h6></label>
+					<label for="dob"><h6>Date of Birth:</h6></label>
                     <input type="date" class="form-control" id="dob" placeholder="dd-mm-yyyy" >
                     <p id="dobfb" style="display: none;"></p>
 				</div>
 			</div>
 
 			<div class="form-row col-md-12">
-				<legend class="col-form-label col-md-2"><h6>Gender<span style="color: red;">*</span>:</h6></legend>
+				<legend class="col-form-label col-md-2"><h6>Gender:</h6></legend>
 				<div class="col-md-12 form-check-inline">
 					<div class="form-check">
-						<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" required>
+						<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
 						<label class="form-check-label" for="gridRadios1">Male</label>
 					</div>
 					<div class="form-check">
-						<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" required>
+						<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
 						<label class="form-check-label" for="gridRadios2">Female</label>
 					</div>
 					<div class="form-check">
-						<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" required>
+						<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
 						<label class="form-check-label" for="gridRadios3">Others</label>
 					</div>
 				</div>
 			</div>
-
-			<!-- <div class="form-row col-md-12 justify-content-center">
-				<div class="form-group col-md-12">
-					<label for="inputGender"><h6>Gender:</h6></label>
-					<select id="inputGender" class="form-control">				// not-able to validate
-						<option selected required>Choose...</option>
-						<option value="1" required>Male</option>
-						<option value="2" required>Female</option>
-						<option value="3" required>Others</option>
-					</select>
-				</div>
-			  </div> -->
 
 			<div class="form-row col-md-12 justify-content-center">
 				<div class="form-group col-md-12">
@@ -197,8 +184,8 @@
 
 <!-- Bootstrap plugins -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 </body>
 </html>
