@@ -1,4 +1,5 @@
-//sign-up
+
+//from sign-up
 let fNameIp = document.getElementById("fName");
 let dobIp = document.getElementById("dob");
 let phoneIp = document.getElementById("phone");
@@ -9,7 +10,8 @@ let pw = document.getElementById("password");
 let pwfb = document.getElementById("pwfb");
 let pw2 = document.getElementById("password2");
 let pw2fb = document.getElementById("pw2fb");
-//sign-in
+
+//from sign-in
 let emailIpSignin = document.getElementById("emailIpSignin");
 let emailFbSignin = document.getElementById("emailFbSignin");
 let pwSignin = document.getElementById("pwSignin");
@@ -24,34 +26,31 @@ function shadowEffectOff() {
     x.classList.remove("shadow-lg");
 }
 
-//sign-in validation
+
+//sign-in form validation
 function signinValidate() {
     let regexpEmailSignin = /^([\w\.\-]+)@([\w\-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
-    let regexpPwSignin = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{8,15}$/;
     if (emailIpSignin.value  == "") {
         emailFbSignin.style.display = "block";
-        emailFbSignin.innerHTML = "Email address cannot be empty!";
+        emailFbSignin.innerHTML = "Email cannot be empty!";
         emailFbSignin.style.color = "red";
-        emailIpSignin.onkeypress = function myMailSignin(){emailFbSignin.style.display = "none";}
+        emailIpSignin.style.border = "red solid 1px"
+        emailIpSignin.onkeydown = function myMsgHide(){emailFbSignin.style.display = "none";emailIpSignin.style.border = "none";}
         return false;
     }
     else if (regexpEmailSignin.test(emailIpSignin.value) == false) {
         emailFbSignin.style.display = "block";
         emailFbSignin.innerHTML = "Invalid Email address!";
         emailFbSignin.style.color = "red";
-        emailIpSignin.onkeypress = function myMailSigninOne(){emailFbSignin.style.display = "none";}
+        emailIpSignin.onkeydown = function myMsgHide(){emailFbSignin.style.display = "none";}
         return false;
     }
     else if (pwSignin.value == "") {
         pwFbSignin.style.display = "block";
         pwFbSignin.innerHTML = "Password cannot be empty!";
         pwFbSignin.style.color = "red";
-        return false;
-    }
-    else if (regexpPwSignin.test(pwSignin.value) == false) {
-        pwFbSignin.style.display = "block";
-        pwFbSignin.innerHTML = "Invalid password!";
-        pwFbSignin.style.color = "red";
+        pwSignin.style.border = "red solid 1px";
+        pwSignin.onkeydown = function myMsgHide(){pwFbSignin.style.display = "none";pwSignin.style.border = "none";}
         return false;
     }
     else {
@@ -59,7 +58,8 @@ function signinValidate() {
     }
 }
 
-// Form Validation
+
+//sign up form Validation
 function formValidate(){
     let regexpFname = /^(\w)+(\d|\s|\.|\-)*(\w)*$/gim;
     let regexpPhone = /^([0-9]){3}([\s|\-|\.]?)([0-9]){3}([\s|\-|\.]?)([0-9]){4}$/;
@@ -70,7 +70,7 @@ function formValidate(){
         fNamefb.innerHTML = "Cannot be empty!";
         fNamefb.style.color = "red";
         fNameIp.style.border = "red solid 1px";
-        fNameIp.onkeydown = function myFname(){fNamefb.style.display = "none";}
+        fNameIp.onkeydown = function myFname(){fNamefb.style.display = "none";fNameIp.style.border = "none";}
         return false;
     }
     else if (regexpFname.test(fNameIp.value) == false) {
@@ -78,7 +78,7 @@ function formValidate(){
         fNamefb.innerHTML = "invalid!";
         fNamefb.style.color = "red";
         fNameIp.style.border = "red solid 1px";
-        fNameIp.onkeydown = function myFname(){fNamefb.style.display = "none";fNameIp.removeAttribute("style");}
+        fNameIp.onkeydown = function myFname(){fNamefb.style.display = "none";fNameIp.style.border = "none";}
         return false;
     }
     else if (dobIp.value == "") {
@@ -90,36 +90,41 @@ function formValidate(){
     }
     else if (regexpPhone.test(phoneIp.value) == false){
         phonefb.style.display = "block";
-        phonefb.innerHTML = "Must be 10 digits only!";
+        phonefb.innerHTML = "Must be 10 digits!";
         phonefb.style.color = "red";
-        phoneIp.onkeypress = function myPhone(){phonefb.style.display = "none";}
+        phoneIp.style.border = "red solid 1px";
+        phoneIp.onkeydown = function myPhone(){phonefb.style.display = "none"; phoneIp.style.border = "none";}
         return false;
     }
     else if (regexpEmail.test(emailip.value) == false){
         emailfb.style.display = "block";
         emailfb.innerHTML = "Invalid Email address!";
         emailfb.style.color = "red";
-        emailip.onkeypress = function myMail(){emailfb.style.display = "none";}
+        emailip.style.border = "red solid 1px";
+        emailip.onkeydown = function myMail(){emailfb.style.display = "none"; emailip.style.border = "none";}
         return false;
     }
     else if (regexpPw.test(pw.value) == ""){
         pwfb.style.display = "block";
         pwfb.innerHTML = "Password cannot be empty!";
         pwfb.style.color = "red";
-        pw.onkeypress = function myPw(){pwfb.style.display = "none";}
+        pw.style.border = "red solid 1px";
+        pw.onkeydown = function myPw(){pwfb.style.display = "none"; pw.style.border = "none";}
         return false;
     }
     else if (pw.value != pw2.value){
         pw2fb.style.display = "block";
         pw2fb.innerHTML = "Password does not match!";
         pw2fb.style.color = "red";
-        pw2.onkeypress = function myPw2(){pw2fb.style.display = "none";}
+        pw2.style.border = "red solid 1px";
+        pw2.onkeydown = function myPw2(){pw2fb.style.display = "none"; pw2.style.border = "none";}
         return false;
     }
     else {
         return true;
     }
 }
+
 
 // Password input hidden details
 pw.onblur = function myBlur() {
