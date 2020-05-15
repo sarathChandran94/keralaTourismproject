@@ -16,6 +16,9 @@
 #myNav{
     background-color: #008795;
 }
+#myNavItems {
+    margin-left: 20px;
+}
 
 #kerala{
     background: linear-gradient(to right, #9ecb2d 0%,#bfd255 100%);
